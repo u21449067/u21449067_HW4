@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#add">Register Dropoff</a></li>
+    <li><a data-toggle="tab" href="#delete">Delete Dropoff</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="add" class="tab-pane fade">
+
+        @using (Html.BeginForm("AddDropoff", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="dropOffName">Your Company Name</label>
+                <input class="form-control" id="dropOffName" name="dropOffName" />
+            </div>
+            <div class="form-group">
+                <label for="recyclableType">Choose Recyclable Type</label>
+                <select class="form-control" id="recyclableType" name="recyclableType">
+                    <option value="1">Glass</option>
+                    <option value="2">Paper</option>
+                    <option value="3">Aluminium</option>
+                    <option value="4">Plastic</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city">Choose City</label>
+                <select class="form-control" id="city" name="city">
+                    <option value="Pretoria">Pretoria</option>
+                    <option value="Durban">Durban</option>
+                    <option value="Nelspruit">Nelspruit</option>
+                    <option value="Johannesburg">Johannesburg</option>
+                    <option value="Kimberly">Kimberly</option>
+                    <option value="Cape Town">Cape Town</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input class="form-control" id="address" name="address" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+    </div>
+    <div id="delete" class="tab-pane fade">
+        @using (Html.BeginForm("deleteDropOff", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input class="form-control" id="companyName" name="companyName" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "AddDropoff";
+    ViewBag.Message = "Message";
+}
+<h2>Add Dropoff</h2>
+<p>Are you a grocery store and would like to add your store to the list of groceres who keep recycable materials for collection by recycling businesses.</p>
+
+@using (Html.BeginForm("AddDropoff", "Home", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <label for="dropOffName">Your Company Name</label>
+        <input class="form-control" id="dropOffName" name="dropOffName" />
+    </div>
+    <div class="form-group">
+        <label for="recyclableType">Choose Recyclable Type</label>
+        <select class="form-control" id="recyclableType" name="recyclableType">
+            <option value="1">Glass</option>
+            <option value="2">Paper</option>
+            <option value="2">Aluminium</option>
+            <option value="2">Plastic</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="city">Choose City</label>
+        <select class="form-control" id="city" name="city">
+            <option value="1">Pretoria</option>
+            <option value="2">Durban</option>
+            <option value="3">Nelspruit</option>
+            <option value="4">Johannesburg</option>
+            <option value="5">Kimberly</option>
+            <option value="6">Cape Town</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" id="address" name="address" />
+    </div>
+
+
+    @*<label>City</label>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <label>Recycle Type</label>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <label>Name</label>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+    <button type="submit" class="btn btn-primary">Submit</button>*@
+    <style>
+        .pushable {
+            background: hsl(340deg 100% 32%);
+            border-radius: 12px;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline-offset: 4px;
+        }
+
+        .front {
+            display: block;
+            padding: 12px 42px;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            background: hsl(345deg 100% 47%);
+            color: white;
+            transform: translateY(-6px);
+        }
+
+        .pushable:active .front {
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <button class="pushable">
+        <span class="front">
+            Submit
+        </span>
+    </button>
+}
+

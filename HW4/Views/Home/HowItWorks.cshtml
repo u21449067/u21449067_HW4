@@ -1,0 +1,41 @@
+﻿@model List<HW4.Models.Recyclables>
+@{
+    ViewBag.Title = "How It Works";
+    ViewBag.Message = "Find your nearest grocer who collects recyclable materials";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>This is a very simple business for you. Do you want to recycle but can't or don't want to take your recycble materials to the recycling business? Well simply choose your City in the drop down below, and it will show you to which Grocer you can take your recycble material to be recycled.</p>
+
+@using (Html.BeginForm("searchCity", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="searchCity">Choose your City</label>
+        <select class="form-control" id="searchCity" name="searchCity">
+            <option value="1">Pretoria</option>
+            <option value="2">Durban</option>
+            <option value="3">Nelspruit</option>
+            <option value="4">Johannesburg</option>
+            <option value="5">Kimberly</option>
+            <option value="6">Cape Town</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
+
+@foreach (var recyclable in Model)
+{
+<div class="row">
+    <h6>Name</h6>
+    <h6>@recyclable.DropoffPoint.Name</h6>
+    <h6>Type</h6>
+    <h6>@recyclable.RecycleType</h6>
+    <h6>City</h6>
+    <h6>@recyclable.DropoffPoint.City</h6>
+    <h6>Address</h6>
+    <h6>@recyclable.DropoffPoint.Address</h6>
+    <h6>Dustbin Colour</h6>
+    <h6>@recyclable.GetDustbinColour()</h6>
+</div>
+}

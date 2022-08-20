@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "RecycleYourself";
+}
+
+<h2>RecycleYourself</h2>
+<div>
+    <button id="show1" class="btn btn-primary btn-block" onclick="show1()">Paper</button>
+
+    <div style="display:none" id="content1">
+        <h4>Top tips on how to reuse paper:</h4>
+        <ul>
+            <li>Dry all windows after a wash with newspaper.</li>
+            <li>Make envolopes out of paper.</li>
+            <li>Use paper/newspaper as lining paper in cupboards or drawers.</li>
+            <li>Newspaper can be used as wrapping paper for gifts or just to protect breakable objects.</li>
+        </ul>
+        <button id="less1" class="btn btn-danger btn-block" onclick="less1()">Less</button>
+    </div>
+
+    <script>
+        function show1() {
+            document.getElementById('content1').style.height = "400px"
+            document.getElementById('content1').style.display = "block"
+            //document.getElementById('show1').style.display = "none"
+        }
+
+        function less1() {
+            document.getElementById('content1').style.height = "0px"
+            document.getElementById('content1').style.display = "none"
+            document.getElementById('less1').style.display = "inline"
+        }
+    </script>
+</div>
+
+<div>
+    <button id="show2" class="btn btn-primary btn-block" onclick="show2()">Glass</button>
+
+    <div style="display:none" id="content2">
+        <h4>Top tips on how to reuse glass:</h4>
+        <ul>
+            <li>Reuse glass drink bottles as a liqued soap dispenser.</li>
+            <li>Decorate bottles by painting them and use it as decor around the house.</li>
+            <li>Use glass jars as additional storage, example keeping sweets in.</li>
+        </ul>
+
+        <button id="less2" class="btn btn-danger btn-block" onclick="less2()">Less</button>
+    </div>
+
+    <script>
+        function show2() {
+            document.getElementById('content2').style.height = "400px"
+            document.getElementById('content2').style.display = "block"
+            //document.getElementById('show2').style.display = "none"
+        }
+
+        function less2() {
+            document.getElementById('content2').style.height = "0px"
+            document.getElementById('content2').style.display = "none"
+            document.getElementById('less2').style.display = "inline"
+        }
+    </script>
+</div>
+
+<div>
+    <button id="show3" class="btn btn-primary btn-block" onclick="show3()">Compost</button>
+
+   
+
+    <div style="display:none" id="content3">
+        <h4>The easiest way to make your own compost:</h4>
+        <ol>
+            <li>Get a area where you will grow your compost.</li>
+            <li>Lay leaves for the bottom layer.</li>
+            <li>The easiest part, throw your kitchen scraps on this pile, like egg shells, vegetables and coffee grounds.</li>
+            <li>Next through grass cuttings.</li>
+            <li>After a week or two of watering your compost, it will be ready to use in your garden for a healthier garden and enviroment.</li>
+        </ol>
+        <button id="less3" class="btn btn-danger btn-block" onclick="less3()">Less</button>
+    </div>
+
+    <script>
+        function show3() {
+            document.getElementById('content3').style.height = "400px"
+            document.getElementById('content3').style.display = "block"
+            //document.getElementById('show3').style.display = "none"
+        }
+
+        function less3() {
+            document.getElementById('content3').style.height = "0px"
+            document.getElementById('content3').style.display = "none"
+            document.getElementById('less3').style.display = "inline"
+        }
+    </script>
+</div>
+
+@*<button onclick="toggleText()">Paper</button>
+    <p id="Myid">How To Recycle Paper At Home</p>
+    <script>
+        function toggleText() {
+            var x = document.getElementById("Myid");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <button onclick="toggleText()">Glass</button>
+    <p id="Myid1">How To Recycle Glass At Home</p>
+    <script>
+        function toggleText() {
+            var xx = document.getElementById("Myid1");
+            if (xx.style.display === "none") {
+                xx.style.display = "block";
+            } else {
+                xx.style.display = "none";
+            }
+        }
+    </script>
+
+    <button onclick="toggleText()">Compost</button>
+    <p id="Myid2">How To Make Your Own Compost</p>
+    <script>
+        function toggleText() {
+            var xi = document.getElementById("Myid2");
+            if (xi.style.display === "none") {
+                xi.style.display = "block";
+            } else {
+                xi.style.display = "none";
+            }
+        }
+    </script>*@
